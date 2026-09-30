@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#202b29">
+  <title>Tarefas</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="#tarefas" aria-label="Tarefas, início"><span class="brand-mark" aria-hidden="true"><svg
+            viewBox="0 0 32 32">
+            <path d="m7 16 6 6L26 9" />
+          </svg></span>tarefas<span class="brand-dot">.</span></a>
+      <div class="sidebar-middle"><span class="nav-caption">MEU PAU</span><a class="nav-item" href="#tarefas"><svg
+            viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m3 6 2 2 3-3m3 2h10M3 12l2 2 3-3m3 2h10M3 18l2 2 3-3m3 2h10" />
+          </svg>Minhas tarefas<span class="nav-arrow" aria-hidden="true">↗</span></a></div>
+      <div class="sidebar-bottom"><span class="avatar" aria-hidden="true">P</span>
+        <div><strong>Pessoal</strong><span>Meu espaço de trabalho</span></div>
+      </div>
+    </aside>
+
+    <main class="workspace" id="tarefas" aria-labelledby="tasks-heading">
+      <header class="page-header"><span class="breadcrumb">Pessoal <span aria-hidden="true">/</span> Tarefas</span><span
+          id="today" class="date-label"></span></header>
+      <section class="heading-section">
+        <div>
+          <p class="eyebrow">VISÃO GERAL</p>
+          <h1 id="tasks-heading">Minhas tarefas<span>.</span></h1>
+        </div><span class="heading-icon" aria-hidden="true"><svg viewBox="0 0 48 48">
+            <path d="m13 24 8 8 16-17" />
+          </svg></span>
+      </section>
+
+      <section class="progress-section" aria-label="Progresso">
+        <div class="progress-top">
+          <div class="progress-text"><span class="progress-dot" aria-hidden="true"></span><span id="progress-label">0 de
+              0 concluídas</span></div><strong id="progress-percent">0%</strong>
+        </div>
+        <div class="progress-track" id="progress-bar" role="progressbar" aria-label="Progresso das tarefas"
+          aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-fill"></span></div>
+      </section>
+
+      <form id="task-form" class="task-form" autocomplete="off"><label for="task-input" class="sr-only">Nova
+          tarefa</label><span class="input-plus" aria-hidden="true">+</span><input id="task-input" name="task"
+          type="text" maxlength="90" placeholder="Escreva uma nova tarefa" required><button class="primary-button"
+          id="add-button" type="submit">Adicionar tarefa <span aria-hidden="true">↗</span></button></form>
+
+      <section class="list-section" aria-label="Lista de tarefas">
+        <div class="list-toolbar">
+          <div class="filters" role="group" aria-label="Filtrar tarefas"><button class="filter active" type="button"
+              data-filter="all" aria-pressed="true">Todas</button><button class="filter" type="button"
+              data-filter="active" aria-pressed="false">Pendentes</button><button class="filter" type="button"
+              data-filter="completed" aria-pressed="false">Concluídas</button></div><span id="task-count"
+            class="count-label">0 tarefas</span>
+        </div>
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+        <div id="empty-state" class="empty-state" hidden>
+          <div class="empty-drawing" aria-hidden="true"><span class="paper paper-back"></span><span
+              class="paper paper-front"><svg viewBox="0 0 60 76">
+                <path d="m13 23 4 4 7-8m8 5h15M13 40h34M13 52h24" />
+              </svg></span><span class="paper-seal">✓</span></div><strong>Sua lista está vazia</strong>
+          <p>Adicione uma tarefa para começar.</p>
+        </div>
+      </section>
+      <div id="notification" class="notification" role="status" aria-live="polite"></div>
+    </main>
+  </div>
+  <script src="assets/app.js" defer></script>
+</body>
+
+</html>

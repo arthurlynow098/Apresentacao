@@ -1,0 +1,12 @@
+[2026-09-30 10:14:02] [INFO] [AuthService] Login bem-sucedido: usuario="carlos.silva@email.com", ip="177.18.204.42"
+[2026-09-30 10:14:15] [ERROR] [PaymentController] Falha no processamento de cartão:
+  Payload: {
+    "titular": "Carlos A Silva",
+    "cpf": "123.456.789-00",
+    "cartao": "4532-XXXX-XXXX-9812",
+    "cvv": "321",
+    "valor": 450.00
+  }
+  Erro: Gateway Timeout
+[2026-09-30 10:15:30] [ERROR] [DatabaseConnection] Conexão falhou com a string:
+  postgres://admin_master:P@ssw0rdSuperSegura#2026!@aws-us-east-1.rds.amazonaws.com:5432/clientes_financeiro

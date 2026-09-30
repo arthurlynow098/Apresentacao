@@ -1,0 +1,25 @@
+git init
+git config --local user.name "Arthur Entsev"
+git config --local user.email "arthur@example.com"
+
+#Abrir arquivos para o pessoal ver o conteúdo perigoso
+git check-ignore -v .env logs/app.log node_modules/exemplo/README.txt
+
+#Não faça nada no código
+git add .
+git commit -m "Feat: Cria pagina inicial"
+
+#Alterar a classe primary-button e mudar a cor
+git status
+git diff
+git add assets/style.css
+git status
+git commit -m "Feat(UI): Altera cor do botao"
+
+#Troque o texto da página
+git add index.html
+git commit -m "Salvando tudo"
+git log --oneline -3
+
+git commit --amend -m "feat(ui): Altera texto da página"
+git log --oneline -3
