@@ -15,4 +15,4 @@ Abra `index.html` no navegador. Não precisa instalar pacotes, iniciar servidor 
 - `.env.example`: exemplo público de configuração.
 - `.env`, `logs/app.log`, `node_modules/`: arquivos fictícios para demonstrar as regras de exclusão.
 
-O projeto está sem a pasta `.git` para permitir `git init` ao vivo. A regra `.primary-button` em `assets/style.css` usa `background: #ffcc45`: altere para `#48e5c2` e use `git diff` para mostrar essa mudança antes do commit. O texto do botão em `index.html` pode ser alterado de `Adicionar tarefa` para `Criar tarefa` na etapa de correção da mensagem com `git commit --amend`...
+O projeto está sem a pasta `.git` para permitir `git init` ao vivo. A regra `.primary-button` em `assets/style.css` usa `background: #ffcc45`: altere para `#48e5c2` e use `git diff` para mostrar essa mudança antes do commit. O texto do botão em `index.html` pode ser alterado de `Adicionar tarefa` para `Criar tarefa` na etapa de correção da mensagem com `git commit --amend`.
